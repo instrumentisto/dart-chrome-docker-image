@@ -18,7 +18,7 @@
 }
 
 @test "content_shell runs ok" {
-  run docker run --rm --entrypoint sh $IMAGE -c 'content_shell --help'
+  run docker run --rm $IMAGE 'content_shell --dump-render-tree google.com'
   [ "$status" -eq 0 ]
 }
 
