@@ -42,7 +42,7 @@ RUN mkdir -p /tmp/dart \
  && curl -L -o /tmp/dart/content_shell.zip \
          https://storage.googleapis.com/dart-archive/channels/stable/release/1.20.1/dartium/content_shell-linux-x64-release.zip \
  && unzip /tmp/dart/content_shell.zip -d /tmp/dart/ \
- && mv /tmp/dart/drt-lucid64* /usr/local/content_shell \
+ && mv /tmp/dart/drt-linux-* /usr/local/content_shell \
 
  && apt-get purge -y --force-yes \
                   unzip \
