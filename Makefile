@@ -12,8 +12,8 @@
 
 
 IMAGE_NAME := instrumentisto/dart-content-shell
-VERSION ?= 1.22.1
-TAGS ?= 1.22.1,1.22,1,latest
+VERSION ?= 1.23.0
+TAGS ?= 1.23.0,1.23,1,latest
 
 no-cache ?= no
 
