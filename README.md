@@ -1,10 +1,7 @@
 Dart with Content Shell Docker image
 ====================================
 
-[![GitHub release](https://img.shields.io/github/release/instrumentisto/dart-content-shell-docker-image.svg)](https://hub.docker.com/r/instrumentisto/dart-content-shell/tags)
-[![Build Status](https://travis-ci.org/instrumentisto/dart-content-shell-docker-image.svg?branch=master)](https://travis-ci.org/instrumentisto/dart-content-shell-docker-image)
-[![Docker Pulls](https://img.shields.io/docker/pulls/instrumentisto/dart-content-shell.svg)](https://hub.docker.com/r/instrumentisto/dart-content-shell)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/instrumentisto/dart-content-shell-docker-image/blob/master/LICENSE.md)
+[![GitHub release](https://img.shields.io/github/release/instrumentisto/dart-content-shell-docker-image.svg)](https://hub.docker.com/r/instrumentisto/dart-content-shell/tags) [![Build Status](https://travis-ci.org/instrumentisto/dart-content-shell-docker-image.svg?branch=master)](https://travis-ci.org/instrumentisto/dart-content-shell-docker-image) [![Docker Pulls](https://img.shields.io/docker/pulls/instrumentisto/dart-content-shell.svg)](https://hub.docker.com/r/instrumentisto/dart-content-shell) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/instrumentisto/dart-content-shell-docker-image/blob/master/LICENSE.md)
 
 This image is a wrapper of [official Google Dart image][1] that contains [Content Shell][2] for running browser tests.
 
