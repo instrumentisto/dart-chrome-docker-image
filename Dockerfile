@@ -3,7 +3,7 @@
 
 # https://hub.docker.com/r/google/dart
 # https://github.com/dart-lang/dart_docker
-FROM google/dart:1.24.2
+FROM google/dart:1.24.3
 
 MAINTAINER Instrumentisto Team <developer@instrumentisto.com>
 
@@ -27,7 +27,7 @@ RUN mkdir -p /tmp/dart \
             fonts-indic \
             ttf-dejavu-core fonts-dejavu-core \
             ttf-kochi-gothic ttf-kochi-mincho \
-            msttcorefonts \
+            ttf-mscorefonts-installer \
 
  # Trick to fake ttf-indic-fonts-core since ttf-indic-fonts is transitional
  && mkdir -p /usr/share/fonts/truetype/ttf-indic-fonts-core \
@@ -42,7 +42,7 @@ RUN mkdir -p /tmp/dart \
 
  # Install content_shell of required version
  && curl -fL -o /tmp/dart/content_shell.zip \
-         https://storage.googleapis.com/dart-archive/channels/stable/release/1.24.2/dartium/content_shell-linux-x64-release.zip \
+         https://storage.googleapis.com/dart-archive/channels/stable/release/1.24.3/dartium/content_shell-linux-x64-release.zip \
  && unzip /tmp/dart/content_shell.zip -d /tmp/dart/ \
  && mv /tmp/dart/drt-linux-* /usr/local/content_shell \
 
