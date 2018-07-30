@@ -11,7 +11,7 @@
 #	make release
 
 
-IMAGE_NAME := instrumentisto/dart-content-shell
+IMAGE_NAME := instrumentisto/dart-test
 VERSION ?= 1.24.3
 TAGS ?= 1.24.3,1.24,1,latest
 

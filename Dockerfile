@@ -39,11 +39,11 @@ RUN mkdir -p /tmp/dart \
  && ln -s /usr/share/fonts/truetype/fonts-beng-extra/MuktiNarrow.ttf \
           /usr/share/fonts/truetype/ttf-indic-fonts-core/MuktiNarrow.ttf \
     \
- # Install content_shell of required version
- && curl -fL -o /tmp/dart/content_shell.zip \
-         https://storage.googleapis.com/dart-archive/channels/stable/release/1.24.3/dartium/content_shell-linux-x64-release.zip \
- && unzip /tmp/dart/content_shell.zip -d /tmp/dart/ \
- && mv /tmp/dart/drt-linux-* /usr/local/content_shell \
+ # Install Google Chrome
+ && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+ && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list' \
+ && apt-get update \
+ && apt-get install --assume-yes google-chrome-stable \
     \
  && apt-get purge -y --force-yes \
                   unzip \
