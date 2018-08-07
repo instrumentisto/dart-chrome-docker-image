@@ -11,7 +11,7 @@
 #	make release
 
 
-IMAGE_NAME := instrumentisto/dart-test
+IMAGE_NAME := instrumentisto/dart-chrome
 VERSION ?= 1.24.3
 TAGS ?= 1.24.3,1.24,1,latest
 
@@ -72,21 +72,6 @@ release: | image tags push
 
 
 
-# Generate Dockerfile from template.
-#
-# Usage:
-#	make dockerfile [VERSION=<dart-version>]
-
-dockerfile:
-	docker run --rm -i \
-		-v $(PWD)/Dockerfile-template.j2:/data/Dockerfile.j2:ro \
-		-e TEMPLATE=Dockerfile.j2 \
-		pinterb/jinja2 \
-			dart_ver='$(VERSION)' \
-		> $(PWD)/Dockerfile
-
-
-
 # Create `post_push` Docker Hub hook.
 #
 # When Docker Hub triggers automated build all the tags defined in `post_push`
@@ -143,4 +128,4 @@ endif
 
 
 
-.PHONY: image tags push release dockerfile post-push-hook test deps.bats
+.PHONY: image tags push release post-push-hook test deps.bats
